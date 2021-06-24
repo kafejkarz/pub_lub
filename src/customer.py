@@ -6,5 +6,6 @@ class Customer:
 
     
 
-    def add.cash(self, amount)
-    
+    def add_cash(self, amount):
+        self.wallet += amount
+
