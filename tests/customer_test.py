@@ -5,17 +5,21 @@ from src.drinks import *
 
 class TestCustomer(unittest.TestCase):
     def setUp(self):
-        self.customer = Customer("Juan", 100.00)
+        self.customer = Customer("Arek", 200)
+        
 
     
+    # po def okresl co chcesz przetestowac
+    # nastepnie przez self wskaz czego/kogo ma to dotyczyc 
+    # stworz nazwe metody(oraz podaj argument)
+    # self.assertEqual(przewidywany outcome, sciezka docelowa)
     
-    @unittest.skip("Delete this line to run the test")
-    def test_customer_has_name(self):
-        self.assertEqual("Juan", self.customer.name)
-    
-    @unittest.skip("Delete this line to run the test")
-    def test_customer_has_cash(self):
-        self.assertEqual(100.00, self.customer.wallet)
 
-    def test_customer_buys_drink(self):
-        self.assertEqual(True, self.customer.wallet)
+    
+    def test_add_some_cash_to_arek_wallet(self):
+         self.customer.add.cash(100)
+         self.assertEqual(300, self.customer.wallet)
+    
+
+
+    

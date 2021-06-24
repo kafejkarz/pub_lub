@@ -5,21 +5,30 @@ from src.customer import *
 
 class TestPub(unittest.TestCase):
     def setUp(self):
-        self.pub = Pub("The Prancing Pony", 100.00)
-
-    @unittest.skip("Delete this line to run the test")
-    def test_pub_has_name(self):
-        self.assertEqual("The Prancing Pony", self.pub.name)
+        self.pub = Pub("Prancing Pony", 100)
+        self.drinks = Drinks("beer", 5)
+        self.drinks_1 = Drinks("wine", 10)
+        self.drinks_2 = Drinks("cider", 5)
+        self.customer = Customer("Arek", 200)
+  
+  
+  
     
-    @unittest.skip("Delete this line to run the test")
-    def test_till_has_cash(self):
-        self.assertEqual(100.00, self.pub.till)
+    def test_pub_has_a_name(self):
+        self.assertEqual("Prancing Pony", self.pub.name)
 
-    @unittest.skip("Delete this line to run the test")
-    def test_can_sell_drink_to_customer(self):
-        self.assertEqual(True, self.customer.wallet)
-        self.assertEqual(80.00, self.subtract.wallet(20.00))
-        self.assertEqual(120.00, self.pub.till)
+    def test_pub_has_till(self):
+        self.assertEqual(100, self.pub.till)
+
+    def test_increase_till(self):
+          self.pub.add_some_cash(500)
+          self.assertEqual(600, self.pub.till)
+
+   
+        
+    
+
+    
       
     
 

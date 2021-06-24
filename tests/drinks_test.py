@@ -5,15 +5,11 @@ from src.drinks import *
 
 class TestDrinks(unittest.TestCase):
     def setUp(self):
-        self.drinks = Drinks("beer", 20.00)
+        self.drinks = Drinks("beer", 5)
+        self.drinks_1 = Drinks("wine", 10)
+        self.drinks_2 = Drinks("cider", 5)
     
-    @unittest.skip("Delete this line to run the test")
-    def test_drink_has_name(self):
-        self.assertEqual("beer", self.drinks.name) 
     
-    @unittest.skip("Delete this line to run the test")
-    def test_drink_has_price(self):
-        self.assertEqual(20.00, self.drinks.price) 
-        
-
     
+    def test_pub_has_a_drinks(self):
+        self.assertEqual("cider", self.drinks_2.name)
